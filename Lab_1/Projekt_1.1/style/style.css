@@ -117,7 +117,6 @@ footer {
   text-align: center;
   margin-bottom: 10px;
   margin-right: 10px;
-  margin-left: 10px;
 }
 
 
@@ -342,4 +341,5 @@ label {
   .ciekawostka img {
     width: 100%;
   }
+
 }
