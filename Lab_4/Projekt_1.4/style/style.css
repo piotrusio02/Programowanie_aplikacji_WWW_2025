@@ -1,0 +1,378 @@
+/* ogólne dla wszystkich podstron */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url('../image/tlo.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto 1fr auto; 
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+  gap: 20px;
+}
+
+
+header {   
+  grid-column: 1 / 13;
+  background: rgba(250, 211, 144, 0.726);
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 10px;
+  text-align: center;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+  margin-right: 10px;
+  margin-left: 10px;
+}
+header h1 {
+  font-family: "Amarante", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #ffffff;
+  text-shadow: 1px 1px 15px black;
+}
+
+.sidebar {
+  grid-column: 1 / 4;
+  grid-row: 2 / 4;
+  background: rgba(250, 211, 144, 0.726);
+  border-radius: 20px;
+  padding: 20px;
+  color: white;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.sidebar li {
+  margin: 40px 0;
+}
+.sidebar a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  display: block;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.sidebar a:hover {
+  background-color: #fab030;
+}
+
+.mobile-menu {
+  display: none;
+  grid-column: 1/13;
+  grid-row: 2 / 3;
+  box-sizing: border-box;
+}
+.mobile-menu ul {
+   display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 0;
+  margin: 10px;
+}
+.mobile-menu li {
+  list-style: none; 
+
+}
+.mobile-menu li a {
+  display: block;
+  text-decoration: none;
+  background-color: #fab030;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 8px;
+  font-weight: bold;
+}
+.mobile-menu li a:hover {
+  background-color: #f09e10;
+}
+
+main {
+  grid-column: 4 / 13;
+  grid-row: 2 / 3;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+  margin-right: 10px;
+}
+
+footer {
+  grid-column: 4 / 13;
+  grid-row: 3 / 4;
+  background: rgba(233, 124, 0, 0.658);
+  border-radius: 20px;
+  padding: 15px;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  
+}
+
+
+/* treść dla strony głównej */
+.home-main .images {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+}
+.home-main .main-img {
+  width: calc((100% - 40px) / 3);
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;    
+}
+
+.porada {
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 30px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+}
+.porada h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.8em;
+}
+.porada-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+.porada-content p {
+  background-color: #FAB41A;
+  padding: 15px;
+  border-radius: 15px;
+  position: relative;
+  flex: 1;
+  font-style: italic;
+  font-size: large
+}
+.chef-img {
+  width: 120px;
+  height: auto;
+  object-fit: cover;
+}
+
+.handmade-banner {
+  border-radius: 20px;
+  padding: 20px 30px;
+  text-align: center;
+  color: #242323;
+  position: relative;
+}
+.handmade-content h3 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+.handmade-content p {
+  font-size: 1.2em;
+  margin-bottom: 25px;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+.handmade-button, button, .kontakt button, .popup button {
+  background-color: #fab030;
+  color: #ffffff;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+  text-decoration: none;
+}
+.handmade-button:hover, button:hover, .kontakt button:hover, .popup button:hover {
+  background-color: #f09e10;
+}
+
+/* treść dla rodzaje makaronów */
+.rodzaje-main {
+    overflow-x: auto;
+}
+.rodzaje-main table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: rgba(250, 211, 144, 0.2);
+  border-radius: 10px;
+  overflow-x: auto;
+  min-width: 300px;
+ 
+}
+.rodzaje-main th, .rodzaje-main td {
+  padding: 10px;
+  border: 1px solid #fab030;
+  text-align: left;
+}
+.rodzaje-main caption {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+/* treść dla handmade makaron */
+.handmade-main h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.handmade-main p {
+  margin-bottom: 20px;
+  font-size: 1.1em;
+}
+.handmade-info {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+.handmade-info li {
+  background-color: #fad390;
+  margin: 4px 0;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+.handmade-maszyna {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin: 30px 0;
+}
+.maszyna-img {
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+}
+.maszyna-text {
+  flex: 1;
+}
+.skladniki li, .kroki li {
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+
+/* treść dla ciekawostki */
+.ciekawostka {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap; 
+}
+.ciekawostka img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+.ciekawostka-text {
+  flex: 1;
+}
+.ciekawostki-lista article, .pytanie {
+  border-bottom: 2px dashed #c7b299;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+/* treść dla quiz */
+label {
+  display: block;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+.popup-tlo {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+.popup {
+  background-color: #ffffff;
+  margin: 10px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 300px;
+  font-size: 1.1rem;
+  animation: fadeIn 0.4s ease;
+}
+/* Animacja wchodzenia */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* treść dla kontakt */
+.kontakt {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+.kontakt input, .kontakt textarea {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #c7b299;
+  font-size: 1em;
+}
+
+
+/* responsywnosć - mobile */
+@media (max-width: 700px) {
+  .sidebar {
+    display: none;
+  }
+  .home-main, footer, .rodzaje-main, .handmade-main, .ciekawostki-main, .quiz-main, .kontakt-main {
+    grid-column: 1 / 13;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  main {
+    grid-row: 3/4;
+  }
+  footer {
+    grid-row: 4/5;
+  }
+  .mobile-menu {
+    display: block;
+  }
+  .handmade-maszyna {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }  
+  .maszyna-img {
+    width: 100%;
+  }
+    .ciekawostka {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .ciekawostka img {
+    width: 100%;
+  }
+}
