@@ -370,9 +370,8 @@ fieldset {
 /* responsywnosć - mobile */
 @media (max-width: 700px) {
 .sidebar {
-      display: none; /* Pozostaje, aby ukryć wizualnie */
-      /* DODAJ TO, ABY SIATKA ZIGNOROWAŁA JEGO ISTNIENIE: */
-      grid-column: 1 / 1; /* Przypisanie tylko do pierwszej (lub jakiejkolwiek innej minimalnej) kolumny */
+      display: none;
+      grid-column: 1 / 1;
       grid-row: 1 / 1; 
     }
   main, footer{
@@ -405,4 +404,5 @@ fieldset {
   .ciekawostka img {
     width: 100%;
   }
+
 }
