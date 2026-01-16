@@ -1,0 +1,220 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('../image/tlo.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto 1fr auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+header, main {
+    grid-column: 1 / -1;
+    background: rgba(250, 211, 144, 0.85);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    margin: 30px;
+}
+
+header h1 {
+    font-family: "Amarante", serif;
+    color: #fff;
+    text-shadow: 1px 1px 15px black;
+    text-align: center;
+}
+
+.head {
+    font-size: 2em;
+    text-align: center;
+    border-bottom: 2px solid #fab030;
+    color: #E97C00;
+    padding-bottom: 5px;
+}
+
+/* logowanie */
+.login {
+    max-width: 400px;
+    width: 90%;
+    margin: 30px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+}
+
+.login .form-group {
+    margin-bottom: 15px; 
+}
+
+input.logowanie {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-top: 0;
+}
+
+input[type="submit"].logowanie {
+    background-color: #fab030;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 30rem;
+    cursor: pointer;
+    font-size: 1em;
+    width: 60%;
+    display: block;
+    margin: 40px auto 0 auto;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"].logowanie:hover {
+    background-color: #f09e10;
+}
+
+/* Lista podstron */
+ul.page-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.page-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    margin:10px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+}
+
+ul.page-list li .page-info {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+ul.page-list li .action-icons {
+    display: flex;
+    gap: 10px;
+}
+
+ul.page-list li .action-icons a img {
+    width: 24px;
+    height: 24px;
+    display: block;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+ul.page-list li .action-icons a img:hover {
+    transform: scale(1.1);
+}
+
+.add-button, .logout-button {
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    border-radius: 30rem;
+    cursor: pointer;
+    font-size: 1em;
+    max-width: 100px;
+    display: block;
+    margin: 40px auto 0 auto; 
+    transition: background-color 0.3s ease;
+}
+.add-button {
+    background-color: #fab030;
+}
+
+.add-button:hover {
+    background-color: #f09e10;
+}
+
+.logout-button {
+    background-color: #a51515;
+}
+
+.logout-button:hover {
+    background-color: #7e0c0c;
+}
+
+/* edytuj strone */
+.edit-form {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.edit-form .form-group input[type="text"],
+.edit-form .form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.edit-form .form-group input[type="submit"] {
+    background-color: #fab030;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1em;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.edit-form .form-group input[type="submit"]:hover {
+    background-color: #f09e10;
+}
+
+.edit-form .checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+
+    /* logowanie - mobile */
+    .login {
+        max-width: 400px;
+        width: 90%;
+        margin: 30px auto;
+        padding: 30px;
+        background: rgba(255, 255, 255, 0.85);
+        border-radius: 20px;
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+        box-sizing: border-box;
+    }
+
+    input.logowanie {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    input[type="submit"].logowanie {
+        width: 100%;
+        margin: 15px 0 0 0;
+    }
+}
